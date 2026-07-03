@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets"
+public_folder: "assets"
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio Content"
+    files:
+      - name: "content"
+        label: "Site Content"
+        file: "data/content.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Tagline words (comma-separated)", name: "tagline_words", widget: "string" }
+              - { label: "Portrait Image URL", name: "portrait_url", widget: "string" }
+              - { label: "Location tag", name: "location_tag", widget: "string" }
+              - { label: "Stat 0 Value", name: "stat_0_value", widget: "string" }
+              - { label: "Stat 0 Label", name: "stat_0_label", widget: "string" }
+              - { label: "Stat 1 Value", name: "stat_1_value", widget: "string" }
+              - { label: "Stat 1 Label", name: "stat_1_label", widget: "string" }
+
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Bio", name: "bio", widget: "text" }
+              - label: "Education"
+                name: "education"
+                widget: "list"
+                fields:
+                  - { label: "Status (Present/Completed)", name: "status", widget: "string" }
+                  - { label: "Degree", name: "degree", widget: "string" }
+                  - { label: "School", name: "school", widget: "string" }
+                  - { label: "Detail (dates, grade)", name: "detail", widget: "string" }
+
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "Group Title", name: "title", widget: "string" }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+
+          - label: "Experience"
+            name: "experience"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Organization", name: "org", widget: "string" }
+              - { label: "Period", name: "period", widget: "string" }
+              - label: "Bullets"
+                name: "bullets"
+                widget: "list"
+                field: { label: "Bullet", name: "bullet", widget: "string" }
+
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image URL", name: "image_url", widget: "string" }
+              - { label: "Live Demo URL", name: "demo_url", widget: "string" }
+              - { label: "GitHub URL", name: "github_url", widget: "string" }
+
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Issuer", name: "issuer", widget: "string" }
