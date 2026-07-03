@@ -1,7 +1,7 @@
 {
   "hero": {
     "name": "Hoshika G.",
-    "tagline_words": "AI enthusiast,Undergraduate & builder,Software engineer,Problem solver",
+    "tagline_words": "AI enthusiast,Undergraduate & builder,Software engineer,Problem solver,Continuous learner",
     "portrait_url": "https://hoshika-portfolio.preview.static.emergentagent.com/assets/hoshika.png",
     "location_tag": "Chittoor · AP",
     "stat_0_value": "8.93",
@@ -27,12 +27,57 @@
     ]
   },
   "skills": [
-    { "title": "Programming Languages", "tags": ["Python", "C", "HTML", "JavaScript"] },
-    { "title": "AI Tools", "tags": ["ChatGPT", "Claude", "Gemini AI", "Gamma AI", "Canva"] },
-    { "title": "Technical Skills", "tags": ["Prompt Engineering", "Problem Solving", "Debugging"] },
-    { "title": "Developer Tools", "tags": ["GitHub", "VS Code", "Anaconda"] },
-    { "title": "Libraries", "tags": ["NumPy", "Pandas", "Matplotlib"] },
-    { "title": "Coursework", "tags": ["Data Structures", "Software Design", "Operating Systems"] }
+    {
+      "title": "Programming Languages",
+      "tags": [
+        "Python",
+        "C",
+        "HTML",
+        "JavaScript"
+      ]
+    },
+    {
+      "title": "AI Tools",
+      "tags": [
+        "ChatGPT",
+        "Claude",
+        "Gemini AI",
+        "Gamma AI",
+        "Canva"
+      ]
+    },
+    {
+      "title": "Technical Skills",
+      "tags": [
+        "Prompt Engineering",
+        "Problem Solving",
+        "Debugging"
+      ]
+    },
+    {
+      "title": "Developer Tools",
+      "tags": [
+        "GitHub",
+        "VS Code",
+        "Anaconda"
+      ]
+    },
+    {
+      "title": "Libraries",
+      "tags": [
+        "NumPy",
+        "Pandas",
+        "Matplotlib"
+      ]
+    },
+    {
+      "title": "Coursework",
+      "tags": [
+        "Data Structures",
+        "Software Design",
+        "Operating Systems"
+      ]
+    }
   ],
   "experience": [
     {
@@ -50,7 +95,12 @@
   "projects": [
     {
       "title": "ATS Resume Checker",
-      "tags": ["Flask", "Python", "NLP", "Deployed on Render"],
+      "tags": [
+        "Flask",
+        "Python",
+        "NLP",
+        "Deployed on Render"
+      ],
       "description": "Flask-based web application that scores resumes on keyword matching, formatting, and content quality — tested across 15 cases with a 100% pass rate.",
       "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1400&q=80",
       "demo_url": "http://ats-resume-checker-rtai.onrender.com",
@@ -58,7 +108,11 @@
     },
     {
       "title": "Vijayam Community Health & Hygiene Survey App",
-      "tags": ["AI Workflow", "Community", "Local DB"],
+      "tags": [
+        "AI Workflow",
+        "Community",
+        "Local DB"
+      ],
       "description": "AI-assisted survey platform that digitized paper-based data collection for village health outreach — local database, personalized recommendations, community service focus.",
       "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80",
       "demo_url": "https://hoshikagunturu-ctrl.github.io/vijayam-survey-app",
