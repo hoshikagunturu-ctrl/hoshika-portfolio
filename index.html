@@ -670,9 +670,9 @@ document.querySelectorAll('.count-up').forEach(el => countIO.observe(el));
 (function typewriter(){
   const el = document.querySelector('.typewriter');
   if (!el) return;
-  const words = (el.dataset.words || '').split(',').map(s => s.trim());
   let wi = 0, ci = 0, deleting = false;
   function step(){
+    const words = (el.dataset.words || '').split(',').map(s => s.trim());
     const word = words[wi % words.length];
     el.textContent = word.substring(0, ci);
     if (!deleting) {
