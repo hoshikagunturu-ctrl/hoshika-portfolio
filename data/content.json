@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "name": "Hoshika G.",
+    "tagline_words": "AI enthusiast,Undergraduate & builder,Software engineer,Problem solver",
+    "portrait_url": "https://hoshika-portfolio.preview.static.emergentagent.com/assets/hoshika.png",
+    "location_tag": "Chittoor · AP",
+    "stat_0_value": "8.93",
+    "stat_0_label": "B.Tech CGPA",
+    "stat_1_value": "97.2",
+    "stat_1_label": "Intermediate"
+  },
+  "about": {
+    "bio": "Penultimate-year AI & Data Science undergraduate who builds and ships working software. Seeking software engineering internship opportunities to apply strong problem-solving, software engineering and AI skills to real-world engineering challenges.",
+    "education": [
+      {
+        "status": "Present",
+        "degree": "B.Tech — Artificial Intelligence & Data Science",
+        "school": "Vijayam Institute of Technology",
+        "detail": "Expected June 2028 · CGPA 8.93"
+      },
+      {
+        "status": "Completed",
+        "degree": "Intermediate (MPC)",
+        "school": "Sri Chaitanya Junior College",
+        "detail": "2021 – 2023 · 97.2%"
+      }
+    ]
+  },
+  "skills": [
+    { "title": "Programming Languages", "tags": ["Python", "C", "HTML", "JavaScript"] },
+    { "title": "AI Tools", "tags": ["ChatGPT", "Claude", "Gemini AI", "Gamma AI", "Canva"] },
+    { "title": "Technical Skills", "tags": ["Prompt Engineering", "Problem Solving", "Debugging"] },
+    { "title": "Developer Tools", "tags": ["GitHub", "VS Code", "Anaconda"] },
+    { "title": "Libraries", "tags": ["NumPy", "Pandas", "Matplotlib"] },
+    { "title": "Coursework", "tags": ["Data Structures", "Software Design", "Operating Systems"] }
+  ],
+  "experience": [
+    {
+      "title": "Self-Directed Software Engineering Training",
+      "org": "Independent Study",
+      "period": "2025 — Present",
+      "bullets": [
+        "Learning software engineering through hands-on projects.",
+        "Building applications using Python, C, HTML, and AI-assisted workflows.",
+        "Applying Git-based version control.",
+        "Practicing object-oriented programming and software design principles."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "ATS Resume Checker",
+      "tags": ["Flask", "Python", "NLP", "Deployed on Render"],
+      "description": "Flask-based web application that scores resumes on keyword matching, formatting, and content quality — tested across 15 cases with a 100% pass rate.",
+      "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1400&q=80",
+      "demo_url": "http://ats-resume-checker-rtai.onrender.com",
+      "github_url": "https://github.com/hoshikagunturu-ctrl/ats-resume-checker"
+    },
+    {
+      "title": "Vijayam Community Health & Hygiene Survey App",
+      "tags": ["AI Workflow", "Community", "Local DB"],
+      "description": "AI-assisted survey platform that digitized paper-based data collection for village health outreach — local database, personalized recommendations, community service focus.",
+      "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80",
+      "demo_url": "https://hoshikagunturu-ctrl.github.io/vijayam-survey-app",
+      "github_url": "https://github.com/hoshikagunturu-ctrl/vijayam-survey-app"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "AWS Foundations of Prompt Engineering",
+      "issuer": "Amazon Web Services"
+    },
+    {
+      "title": "Data Analytics Job Simulation",
+      "issuer": "Deloitte Australia · Forage"
+    }
+  ]
+}
