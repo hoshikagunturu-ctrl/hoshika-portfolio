@@ -128,5 +128,21 @@
       "title": "Data Analytics Job Simulation",
       "issuer": "Deloitte Australia · Forage"
     }
+  ],
+  "custom_sections": [
+    {
+      "type": "card_grid",
+      "cards": [
+        {
+          "link_url": "assets/abtalks-vicodathon-2026-hoshika-g-abt-hk-drh6q.pdf",
+          "description": "Built ABTalks, a student platform for a 60-day coding journey, in a 48-hour AI-assisted hackathon. My first-ever hackathon experience.",
+          "subheading": "Team Data Dream · with Trisha J & B Gnana Siddartha Roy",
+          "heading": "ViCodathon 2026 — ABTalks"
+        }
+      ],
+      "section_id": "achievements",
+      "title": "Achievements",
+      "eyebrow": "Hackathons"
+    }
   ]
 }
