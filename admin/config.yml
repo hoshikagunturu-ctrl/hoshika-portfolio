@@ -109,7 +109,7 @@ collections:
                       - { label: "Heading", name: "heading", widget: "string" }
                       - { label: "Subheading", name: "subheading", widget: "string", required: false }
                       - { label: "Description", name: "description", widget: "text", required: false }
-                      - { label: "Certificate / Link URL", name: "link_url", widget: "string", required: false }
+                      - { label: "Certificate", name: "link_url", widget: "file", required: false }
               - label: "Timeline"
                 name: "timeline"
                 widget: "object"
