@@ -82,3 +82,45 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Issuer", name: "issuer", widget: "string" }
+          - label: "Custom Sections"
+            name: "custom_sections"
+            widget: "list"
+            types:
+              - label: "Text Block"
+                name: "text_block"
+                widget: "object"
+                fields:
+                  - { label: "Section ID (unique, lowercase, no spaces)", name: "section_id", widget: "string" }
+                  - { label: "Eyebrow (small label above title)", name: "eyebrow", widget: "string", required: false }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body Text", name: "body", widget: "text" }
+              - label: "Card Grid"
+                name: "card_grid"
+                widget: "object"
+                fields:
+                  - { label: "Section ID (unique, lowercase, no spaces)", name: "section_id", widget: "string" }
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+                  - label: "Cards"
+                    name: "cards"
+                    widget: "list"
+                    fields:
+                      - { label: "Heading", name: "heading", widget: "string" }
+                      - { label: "Subheading", name: "subheading", widget: "string", required: false }
+                      - { label: "Description", name: "description", widget: "text", required: false }
+                      - { label: "Certificate / Link URL", name: "link_url", widget: "string", required: false }
+              - label: "Timeline"
+                name: "timeline"
+                widget: "object"
+                fields:
+                  - { label: "Section ID (unique, lowercase, no spaces)", name: "section_id", widget: "string" }
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - { label: "Date/Period", name: "period", widget: "string", required: false }
+                      - { label: "Heading", name: "heading", widget: "string" }
+                      - { label: "Description", name: "description", widget: "text", required: false }
