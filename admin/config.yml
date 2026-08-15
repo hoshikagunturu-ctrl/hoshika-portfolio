@@ -1,10 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-
 media_folder: "assets"
 public_folder: "assets"
-
 collections:
   - name: "portfolio"
     label: "Portfolio Content"
@@ -25,7 +23,6 @@ collections:
               - { label: "Stat 0 Label", name: "stat_0_label", widget: "string" }
               - { label: "Stat 1 Value", name: "stat_1_value", widget: "string" }
               - { label: "Stat 1 Label", name: "stat_1_label", widget: "string" }
-
           - label: "About"
             name: "about"
             widget: "object"
@@ -39,7 +36,6 @@ collections:
                   - { label: "Degree", name: "degree", widget: "string" }
                   - { label: "School", name: "school", widget: "string" }
                   - { label: "Detail (dates, grade)", name: "detail", widget: "string" }
-
           - label: "Skills"
             name: "skills"
             widget: "list"
@@ -49,7 +45,6 @@ collections:
                 name: "tags"
                 widget: "list"
                 field: { label: "Tag", name: "tag", widget: "string" }
-
           - label: "Experience"
             name: "experience"
             widget: "list"
@@ -61,7 +56,6 @@ collections:
                 name: "bullets"
                 widget: "list"
                 field: { label: "Bullet", name: "bullet", widget: "string" }
-
           - label: "Projects"
             name: "projects"
             widget: "list"
@@ -75,52 +69,9 @@ collections:
               - { label: "Image URL", name: "image_url", widget: "string" }
               - { label: "Live Demo URL", name: "demo_url", widget: "string" }
               - { label: "GitHub URL", name: "github_url", widget: "string" }
-
           - label: "Certifications"
             name: "certifications"
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Issuer", name: "issuer", widget: "string" }
-          - label: "Custom Sections"
-            name: "custom_sections"
-            widget: "list"
-            types:
-              - label: "Text Block"
-                name: "text_block"
-                widget: "object"
-                fields:
-                  - { label: "Section ID (unique, lowercase, no spaces)", name: "section_id", widget: "string" }
-                  - { label: "Eyebrow (small label above title)", name: "eyebrow", widget: "string", required: false }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Body Text", name: "body", widget: "text" }
-              - label: "Card Grid"
-                name: "card_grid"
-                widget: "object"
-                fields:
-                  - { label: "Section ID (unique, lowercase, no spaces)", name: "section_id", widget: "string" }
-                  - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
-                  - label: "Cards"
-                    name: "cards"
-                    widget: "list"
-                    fields:
-                      - { label: "Heading", name: "heading", widget: "string" }
-                      - { label: "Subheading", name: "subheading", widget: "string", required: false }
-                      - { label: "Description", name: "description", widget: "text", required: false }
-                      - { label: "Certificate", name: "link_url", widget: "file", required: false }
-              - label: "Timeline"
-                name: "timeline"
-                widget: "object"
-                fields:
-                  - { label: "Section ID (unique, lowercase, no spaces)", name: "section_id", widget: "string" }
-                  - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - label: "Items"
-                    name: "items"
-                    widget: "list"
-                    fields:
-                      - { label: "Date/Period", name: "period", widget: "string", required: false }
-                      - { label: "Heading", name: "heading", widget: "string" }
-                      - { label: "Description", name: "description", widget: "text", required: false }
