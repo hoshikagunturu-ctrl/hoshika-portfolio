@@ -106,7 +106,82 @@
       if (gh && p.github_url) gh.href = p.github_url;
     });
   }
+  function renderTextBlock(block) {
+    return (
+      '<section id="' + (block.section_id || '') + '" class="relative py-24 md:py-32">' +
+        '<div class="max-w-[1400px] mx-auto px-6 md:px-10 grid md:grid-cols-12 gap-10">' +
+          '<div class="md:col-span-4">' +
+            (block.eyebrow ? '<div class="eyebrow mb-6"><span class="eyebrow-dot"></span>' + block.eyebrow + '</div>' : '') +
+            '<h2 class="font-serif text-4xl md:text-5xl tracking-tighter leading-[1]">' + (block.title || '') + '</h2>' +
+          '</div>' +
+          '<div class="md:col-span-8">' +
+            '<p class="text-zinc-700 text-base md:text-lg leading-relaxed max-w-2xl">' + (block.body || '') + '</p>' +
+          '</div>' +
+        '</div>' +
+      '</section>'
+    );
+  }
 
+  function renderCardGrid(block) {
+    var cards = (block.cards || []).map(function (c) {
+      return (
+        '<div class="card-soft p-6 h-full lift">' +
+          '<div class="font-serif text-xl leading-tight">' + (c.heading || '') + '</div>' +
+          (c.subheading ? '<div class="text-sm text-zinc-500 mt-2">' + c.subheading + '</div>' : '') +
+          (c.description ? '<p class="text-sm text-zinc-600 mt-3">' + c.description + '</p>' : '') +
+          (c.link_url ? '<a href="' + c.link_url + '" target="_blank" rel="noreferrer" class="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors">View</a>' : '') +
+        '</div>'
+      );
+    }).join('');
+    return (
+      '<section id="' + (block.section_id || '') + '" class="relative py-24 md:py-32 bg-[#fafafa] border-y border-zinc-200">' +
+        '<div class="max-w-[1400px] mx-auto px-6 md:px-10">' +
+          '<div class="grid md:grid-cols-12 gap-10 mb-14">' +
+            '<div class="md:col-span-4">' +
+              (block.eyebrow ? '<div class="eyebrow mb-6"><span class="eyebrow-dot"></span>' + block.eyebrow + '</div>' : '') +
+              '<h2 class="font-serif text-4xl md:text-5xl tracking-tighter leading-[1]">' + (block.title || '') + '</h2>' +
+            '</div>' +
+            (block.subtitle ? '<div class="md:col-span-8 flex items-end"><p class="text-zinc-600 max-w-xl text-base">' + block.subtitle + '</p></div>' : '') +
+          '</div>' +
+          '<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">' + cards + '</div>' +
+        '</div>' +
+      '</section>'
+    );
+  }
+
+  function renderTimeline(block) {
+    var items = (block.items || []).map(function (it) {
+      return (
+        '<div class="timeline-item">' +
+          (it.period ? '<div class="text-sm text-zinc-500 tracking-wide">' + it.period + '</div>' : '') +
+          '<div class="font-serif text-2xl leading-tight">' + (it.heading || '') + '</div>' +
+          (it.description ? '<p class="mt-2 text-zinc-700">' + it.description + '</p>' : '') +
+        '</div>'
+      );
+    }).join('');
+    return (
+      '<section id="' + (block.section_id || '') + '" class="relative py-24 md:py-32">' +
+        '<div class="max-w-[1400px] mx-auto px-6 md:px-10 grid md:grid-cols-12 gap-10">' +
+          '<div class="md:col-span-4">' +
+            (block.eyebrow ? '<div class="eyebrow mb-6"><span class="eyebrow-dot"></span>' + block.eyebrow + '</div>' : '') +
+            '<h2 class="font-serif text-4xl md:text-5xl tracking-tighter leading-[1]">' + (block.title || '') + '</h2>' +
+          '</div>' +
+          '<div class="md:col-span-8"><div class="timeline">' + items + '</div></div>' +
+        '</div>' +
+      '</section>'
+    );
+  }
+
+  function fillCustomSections(sections) {
+    var container = document.getElementById('custom-sections');
+    if (!container || !Array.isArray(sections)) return;
+    container.innerHTML = sections.map(function (block) {
+      if (block.type === 'text_block') return renderTextBlock(block);
+      if (block.type === 'card_grid') return renderCardGrid(block);
+      if (block.type === 'timeline') return renderTimeline(block);
+      return '';
+    }).join('');
+  }
   function fillCertifications(certifications) {
     (certifications || []).forEach(function (c, i) {
       var root = document.querySelector('[data-testid="cert-card-' + i + '"]');
@@ -127,6 +202,7 @@
       fillExperience(data.experience);
       fillProjects(data.projects);
       fillCertifications(data.certifications);
+      fillCustomSections(data.custom_sections);
     })
     .catch(function (err) {
       console.warn('Could not load content.json, showing default content.', err);
